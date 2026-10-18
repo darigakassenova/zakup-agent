@@ -1,0 +1,320 @@
+[
+ {
+  "id": "q01",
+  "lang": "ru",
+  "tool": "search_contracts",
+  "question": "Покажи договоры заказчика 990740002243 за 2025 год",
+  "gold": "search_customer",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q02",
+  "lang": "kk",
+  "tool": "search_contracts",
+  "question": "051040005150 тапсырыс берушінің 2025 жылғы шарттарын көрсет",
+  "gold": "search_customer",
+  "params": {
+   "bin": "051040005150",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q03",
+  "lang": "ru",
+  "tool": "search_contracts",
+  "question": "Покажи договоры поставщика 930340000390",
+  "gold": "search_supplier",
+  "params": {
+   "bin": "930340000390"
+  }
+ },
+ {
+  "id": "q04",
+  "lang": "kk",
+  "tool": "search_contracts",
+  "question": "670814450363 жеткізушінің шарттарын көрсет",
+  "gold": "search_supplier",
+  "params": {
+   "bin": "670814450363"
+  }
+ },
+ {
+  "id": "q05",
+  "lang": "ru",
+  "tool": "search_contracts",
+  "question": "Найди договоры по ЕНСТРУ 172312.700.000031",
+  "gold": "search_enstru",
+  "params": {
+   "code": "172312.700.000031"
+  }
+ },
+ {
+  "id": "q06",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "Сколько потратил заказчик 990740002243 в 2025 году?",
+  "gold": "spend_customer",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q07",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "Сколько потратил заказчик 051040005150 в 2025 году по поставщикам?",
+  "gold": "spend_top_supplier",
+  "params": {
+   "bin": "051040005150",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q08",
+  "lang": "kk",
+  "tool": "spend_summary",
+  "question": "231040023028 тапсырыс беруші 2025 жылы қанша жұмсады?",
+  "gold": "spend_customer",
+  "params": {
+   "bin": "231040023028",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q09",
+  "lang": "kk",
+  "tool": "spend_summary",
+  "question": "990740002243 тапсырыс беруші 2025 жылы жеткізушілер бойынша қанша жұмсады?",
+  "gold": "spend_top_supplier",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q10",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "Сколько всего потратил заказчик 231040023028 по годам?",
+  "gold": "spend_customer",
+  "params": {
+   "bin": "231040023028",
+   "year": null
+  }
+ },
+ {
+  "id": "q11",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "Какая сумма закупок по ЕНСТРУ 841311.000.000001 у заказчика 990740002243?",
+  "gold": "spend_enstru",
+  "params": {
+   "bin": "990740002243",
+   "code": "841311.000.000001"
+  }
+ },
+ {
+  "id": "q12",
+  "lang": "ru",
+  "tool": "compare_prices",
+  "question": "Сравни цены на ЕНСТРУ 841311.000.000001 по заказчикам",
+  "gold": "compare",
+  "params": {
+   "code": "841311.000.000001",
+   "bins": null
+  }
+ },
+ {
+  "id": "q13",
+  "lang": "ru",
+  "tool": "compare_prices",
+  "question": "Сравни цены на ЕНСТРУ 172312.700.000031 по городам",
+  "gold": "compare",
+  "params": {
+   "code": "172312.700.000031",
+   "bins": null
+  }
+ },
+ {
+  "id": "q14",
+  "lang": "kk",
+  "tool": "compare_prices",
+  "question": "ЕНСТРУ 262040.000.000282 бағаларын салыстыр",
+  "gold": "compare",
+  "params": {
+   "code": "262040.000.000282",
+   "bins": null
+  }
+ },
+ {
+  "id": "q15",
+  "lang": "ru",
+  "tool": "compare_prices",
+  "question": "Сравни цены на ЕНСТРУ 841311.000.000001 у заказчиков 990740002243 и 231040023028",
+  "gold": "compare",
+  "params": {
+   "code": "841311.000.000001",
+   "bins": [
+    "990740002243",
+    "231040023028"
+   ]
+  }
+ },
+ {
+  "id": "q16",
+  "lang": "ru",
+  "tool": "price_anomalies",
+  "question": "Найди ценовые аномалии больше 30% по ЕНСТРУ 841311.000.000001",
+  "gold": "anomalies",
+  "params": {
+   "code": "841311.000.000001",
+   "threshold": 0.3
+  }
+ },
+ {
+  "id": "q17",
+  "lang": "kk",
+  "tool": "price_anomalies",
+  "question": "ЕНСТРУ 172312.700.000031 бойынша бағасы 30%-дан артық ауытқыған сатып алуларды тап",
+  "gold": "anomalies",
+  "params": {
+   "code": "172312.700.000031",
+   "threshold": 0.3
+  }
+ },
+ {
+  "id": "q18",
+  "lang": "ru",
+  "tool": "price_anomalies",
+  "question": "Найди закупки с отклонением цены более 50% по ЕНСТРУ 262040.000.000282",
+  "gold": "anomalies",
+  "params": {
+   "code": "262040.000.000282",
+   "threshold": 0.5
+  }
+ },
+ {
+  "id": "q19",
+  "lang": "ru",
+  "tool": "price_anomalies",
+  "question": "Покажи завышенные цены по ЕНСТРУ 172312.700.000031",
+  "gold": "anomalies",
+  "params": {
+   "code": "172312.700.000031",
+   "threshold": 0.3,
+   "up": true
+  }
+ },
+ {
+  "id": "q20",
+  "lang": "ru",
+  "tool": "price_anomalies",
+  "question": "Найди ценовые аномалии больше 30% у заказчика 990740002243",
+  "gold": "anomalies",
+  "params": {
+   "bin": "990740002243",
+   "threshold": 0.3
+  }
+ },
+ {
+  "id": "q21",
+  "lang": "ru",
+  "tool": "fair_price_check",
+  "question": "Оцени справедливость цены лота 28961561-ОЛ-ЗЦП1",
+  "gold": "fair_lot",
+  "params": {
+   "lot": "28961561-ОЛ-ЗЦП1"
+  }
+ },
+ {
+  "id": "q22",
+  "lang": "kk",
+  "tool": "fair_price_check",
+  "question": "63224230-ЗЦП1 лотының бағасы әділ ме?",
+  "gold": "fair_lot",
+  "params": {
+   "lot": "63224230-ЗЦП1"
+  }
+ },
+ {
+  "id": "q23",
+  "lang": "ru",
+  "tool": "fair_price_check",
+  "question": "Цена лота 63172888-ОИ3 адекватна?",
+  "gold": "fair_lot",
+  "params": {
+   "lot": "63172888-ОИ3"
+  }
+ },
+ {
+  "id": "q24",
+  "lang": "ru",
+  "tool": "fair_price_check",
+  "question": "Оцени справедливость цены договора 19178969",
+  "gold": "fair_contract",
+  "params": {
+   "contract": 19178969
+  }
+ },
+ {
+  "id": "q25",
+  "lang": "ru",
+  "tool": "volume_anomalies",
+  "question": "Есть ли необычный рост объемов у заказчика 990740002243 в 2026 году?",
+  "gold": "volume",
+  "params": {
+   "bin": "990740002243",
+   "year": 2026
+  }
+ },
+ {
+  "id": "q26",
+  "lang": "kk",
+  "tool": "volume_anomalies",
+  "question": "020440003656 тапсырыс берушіде 2026 жылы көлемнің әдеттен тыс өсуі бар ма?",
+  "gold": "volume",
+  "params": {
+   "bin": "020440003656",
+   "year": 2026
+  }
+ },
+ {
+  "id": "q27",
+  "lang": "ru",
+  "tool": "volume_anomalies",
+  "question": "Нетипичное увеличение количества у заказчика 990740002243 в 2025 году",
+  "gold": "volume",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ },
+ {
+  "id": "q28",
+  "lang": "ru",
+  "tool": null,
+  "question": "Какая погода завтра в Астане?",
+  "gold": "refusal",
+  "params": {}
+ },
+ {
+  "id": "q29",
+  "lang": "kk",
+  "tool": null,
+  "question": "Ертең Астанада ауа райы қандай?",
+  "gold": "refusal",
+  "params": {}
+ },
+ {
+  "id": "q30",
+  "lang": "ru",
+  "tool": null,
+  "question": "Сколько будет 2+2?",
+  "gold": "refusal",
+  "params": {}
+ }
+]

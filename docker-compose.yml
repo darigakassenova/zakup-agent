@@ -1,0 +1,50 @@
+x-app: &app
+  build: .
+  image: zakup-agent
+  env_file: .env
+  environment:
+    DATABASE_URL: postgresql://${POSTGRES_USER:-zakup}:${POSTGRES_PASSWORD:-zakup}@db:5432/${POSTGRES_DB:-zakup}
+  depends_on:
+    db:
+      condition: service_healthy
+
+services:
+  db:
+    image: postgres:16
+    container_name: zakup-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-zakup}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-zakup}
+      POSTGRES_DB: ${POSTGRES_DB:-zakup}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-zakup} -d ${POSTGRES_DB:-zakup}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  updater:
+    <<: *app
+    container_name: zakup-updater
+    command: ["python", "src/scheduler.py"]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-zakup}:${POSTGRES_PASSWORD:-zakup}@db:5432/${POSTGRES_DB:-zakup}
+      UPDATE_AT: ${UPDATE_AT:-03:00}
+    restart: unless-stopped
+
+  agent:
+    <<: *app
+    profiles: ["agent"]
+    entrypoint: ["python", "src/ask.py"]
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./eval:/app/eval
+
+volumes:
+  pgdata:

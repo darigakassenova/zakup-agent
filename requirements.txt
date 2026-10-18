@@ -1,0 +1,6 @@
+requests
+python-dotenv
+psycopg[binary]
+pandas
+numpy
+tzdata

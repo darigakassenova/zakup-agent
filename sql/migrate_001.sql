@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS customer;
+ALTER TABLE plan     ADD COLUMN IF NOT EXISTS subject_type_id int;
+ALTER TABLE plan     ADD COLUMN IF NOT EXISTS trade_method_id int;
+ALTER TABLE trd_buy  ADD COLUMN IF NOT EXISTS number_anno     text;
+ALTER TABLE trd_buy  ADD COLUMN IF NOT EXISTS customer_bin    text;
+ALTER TABLE trd_buy  ADD COLUMN IF NOT EXISTS trade_method_id int;
+ALTER TABLE trd_buy  ADD COLUMN IF NOT EXISTS subject_type_id int;
+ALTER TABLE trd_buy  ALTER COLUMN org_bin DROP NOT NULL;
+ALTER TABLE lot      ADD COLUMN IF NOT EXISTS lot_number      text;
+ALTER TABLE lot      ADD COLUMN IF NOT EXISTS status_id       int;
+ALTER TABLE lot      ADD COLUMN IF NOT EXISTS trade_method_id int;
+ALTER TABLE contract ADD COLUMN IF NOT EXISTS contract_number text;
+ALTER TABLE contract ADD COLUMN IF NOT EXISTS trd_buy_number  text;
+ALTER TABLE contract ADD COLUMN IF NOT EXISTS subject_type_id int;
+ALTER TABLE contract ADD COLUMN IF NOT EXISTS trade_method_id int;

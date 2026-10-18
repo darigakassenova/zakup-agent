@@ -1,0 +1,111 @@
+[
+ {
+  "id": "f01",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "Кому организация 990740002243 заплатила больше всего в 2025 году?",
+  "gold": "spend_top_supplier",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ },
+ {
+  "id": "f02",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "Сколько денег ушло у 051040005150 за прошлый год?",
+  "gold": "spend_customer",
+  "params": {
+   "bin": "051040005150",
+   "year": 2025
+  }
+ },
+ {
+  "id": "f03",
+  "lang": "ru",
+  "tool": "search_contracts",
+  "question": "990740002243 — что закупали в 2025-м?",
+  "gold": "search_customer",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ },
+ {
+  "id": "f04",
+  "lang": "ru",
+  "tool": "fair_price_check",
+  "question": "Не переплатили ли по лоту 63224230-ЗЦП1?",
+  "gold": "fair_lot",
+  "params": {
+   "lot": "63224230-ЗЦП1"
+  }
+ },
+ {
+  "id": "f05",
+  "lang": "ru",
+  "tool": "compare_prices",
+  "question": "Где дешевле всего покупают товары с кодом 172312.700.000031?",
+  "gold": "compare",
+  "params": {
+   "code": "172312.700.000031",
+   "bins": null
+  }
+ },
+ {
+  "id": "f06",
+  "lang": "kk",
+  "tool": "spend_summary",
+  "question": "231040023028 ұйымы былтыр қанша ақша жұмсады?",
+  "gold": "spend_customer",
+  "params": {
+   "bin": "231040023028",
+   "year": 2025
+  }
+ },
+ {
+  "id": "f07",
+  "lang": "ru",
+  "tool": "price_anomalies",
+  "question": "Есть ли подозрительно дорогие закупки по коду 841311.000.000001?",
+  "gold": "anomalies",
+  "params": {
+   "code": "841311.000.000001",
+   "threshold": 0.3,
+   "up": true
+  }
+ },
+ {
+  "id": "f08",
+  "lang": "ru",
+  "tool": "volume_anomalies",
+  "question": "Покупает ли 990740002243 в 2026 году намного больше, чем раньше?",
+  "gold": "volume",
+  "params": {
+   "bin": "990740002243",
+   "year": 2026
+  }
+ },
+ {
+  "id": "f09",
+  "lang": "kk",
+  "tool": "fair_price_check",
+  "question": "28961561-ОЛ-ЗЦП1 лоты бойынша артық төленген жоқ па?",
+  "gold": "fair_lot",
+  "params": {
+   "lot": "28961561-ОЛ-ЗЦП1"
+  }
+ },
+ {
+  "id": "f10",
+  "lang": "ru",
+  "tool": "spend_summary",
+  "question": "сколко патратил 990740002243 в 2025 году",
+  "gold": "spend_customer",
+  "params": {
+   "bin": "990740002243",
+   "year": 2025
+  }
+ }
+]
